@@ -1,0 +1,12 @@
+{
+    "version": 1,
+    "support_app_code_version": 1,
+    "templates": [
+        {
+            "name": "Яма на дороге"
+        },
+        {
+            "name": "Яма во дворе"
+        }
+    ]
+}
