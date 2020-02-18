@@ -3,10 +3,14 @@
     "support_app_code_version": 1,
     "templates": [
         {
-            "name": "Яма на дороге"
+            "id": "pit_on_yard",
+            "name": "Яма на дороге",
+            "laws_links": []
         },
         {
-            "name": "Яма во дворе"
+            "id": "pit_in_yard",
+            "name": "Яма во дворе",
+            "laws_links": []
         }
     ]
 }
