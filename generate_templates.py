@@ -21,7 +21,7 @@ templatesMap = {
             "id": "general",
             "name": "Общий",
             "group": "",
-            "laws_links": [
+            "law_links": [
 
             ],
             "fields": [
@@ -32,7 +32,7 @@ templatesMap = {
             "id": "pit_on_road",
             "name": "Яма на дороге",
             "group": "roads",
-            "laws_links": [
+            "law_links": [
 
             ],
             "fields": [
@@ -55,7 +55,7 @@ templatesMap = {
             "id": "pit_in_yard",
             "group": "roads",
             "name": "Яма во дворе",
-            "laws_links": [],
+            "law_links": [],
             "fields": [
                 {
                     "name": "date_time",
@@ -76,7 +76,7 @@ templatesMap = {
             "id": "parking_on_sidewalk",
             "group": "paprking",
             "name": "Парковка на тротуаре",
-            "laws_links": [
+            "law_links": [
                 {
                     "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
                     "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
@@ -102,7 +102,7 @@ templatesMap = {
             "id": "parking_in_wrong place",
             "group": "paprking",
             "name": "Парковка в неположенном месте",
-            "laws_links": [
+            "law_links": [
 
             ],
             "fields": [
