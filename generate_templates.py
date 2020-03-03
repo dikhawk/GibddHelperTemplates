@@ -2,6 +2,8 @@
 
 import json
 
+version = 1
+support_app_code_version = 1
 
 def file_to_string(file_name):
     return open("templates/{}".format(file_name)).read()
@@ -12,10 +14,14 @@ def save_to_file(file_name, text):
     file.write(text)
     file.close()
 
+version_and_support_app_code_version_map = {
+    "version": version,
+    "support_app_code_version": support_app_code_version
+}
 
-templatesMap = {
-    "version": 1,
-    "support_app_code_version": 1,
+templates_map = {
+    "version": version,
+    "support_app_code_version": support_app_code_version,
     "templates": [
         {
             "id": "general",
@@ -124,4 +130,5 @@ templatesMap = {
     ]
 }
 
-save_to_file("templates.json", json.dumps(templatesMap))
+save_to_file("templates.json", json.dumps(templates_map))
+save_to_file("current_version", json.dumps(version_and_support_app_code_version_map))
