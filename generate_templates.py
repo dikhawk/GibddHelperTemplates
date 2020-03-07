@@ -103,29 +103,6 @@ templates_map = {
                 }
             ],
             "text": file_to_string("парковка_на_тротуаре")
-        },
-        {
-            "id": "parking_in_wrong place",
-            "group": "paprking",
-            "name": "Парковка в неположенном месте",
-            "law_links": [
-
-            ],
-            "fields": [
-                {
-                    "name": "date_time",
-                    "hint": "Время и дата нарушения"
-                },
-                {
-                    "name": "location",
-                    "hint": "Место расположение ямы"
-                },
-                {
-                    "name": "description",
-                    "hint": "Опишите дефект"
-                }
-            ],
-            "text": file_to_string("парковка_в_неположенном_месте")
         }
     ]
 }
