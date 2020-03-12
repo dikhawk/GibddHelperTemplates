@@ -2,7 +2,7 @@
 
 import json
 
-version = 1
+version = 2
 support_app_code_version = 1
 
 def file_to_string(file_name):
