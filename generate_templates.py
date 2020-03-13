@@ -2,7 +2,7 @@
 
 import json
 
-version = 2
+version = 3
 support_app_code_version = 1
 
 
