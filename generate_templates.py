@@ -5,6 +5,7 @@ import json
 version = 2
 support_app_code_version = 1
 
+
 def file_to_string(file_name):
     return open("templates/{}".format(file_name)).read()
 
@@ -13,6 +14,7 @@ def save_to_file(file_name, text):
     file = open(file_name, "w")
     file.write(text)
     file.close()
+
 
 version_and_support_app_code_version_map = {
     "version": version,
@@ -103,9 +105,32 @@ templates_map = {
                 }
             ],
             "text": file_to_string("парковка_на_тротуаре")
+        },
+        {
+            "id": "Illegal_traffic_sign",
+            "group": "signs",
+            "name": "Незаконный дорожный знак(таблички под знаком)",
+            "law_links": [
+            ],
+            "fields": [
+                {
+                    "name": "date_time",
+                    "hint": "Время обнаружения"
+                },
+                {
+                    "name": "location",
+                    "hint": "Место расположение дорожного знака"
+                },
+                {
+                    "name": "description",
+                    "hint": "Опишите местонахождение"
+                }
+            ],
+            "text": file_to_string("незаконный_дорожный_знак")
         }
     ]
 }
 
 save_to_file("templates.json", json.dumps(templates_map))
-save_to_file("current_version", json.dumps(version_and_support_app_code_version_map))
+save_to_file("current_version", json.dumps(
+    version_and_support_app_code_version_map))
