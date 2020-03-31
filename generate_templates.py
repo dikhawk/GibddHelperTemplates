@@ -1,13 +1,14 @@
 #!/usr/bin/python3
 
 import json
+import os
 
-version = 3
+version = 4
 support_app_code_version = 1
 
 
 def file_to_string(file_name):
-    return open("templates/{}".format(file_name)).read()
+    return open("{}/templates/{}".format(os.path.dirname(__file__), file_name)).read()
 
 
 def save_to_file(file_name, text):
@@ -127,6 +128,16 @@ templates_map = {
                 }
             ],
             "text": file_to_string("незаконный_дорожный_знак")
+        },
+        {
+            "id": "traffic_light_problems",
+            "group": "road_infrastructure",
+            "name": "Проблемы со светофором",
+            "law_links": [
+            ],
+            "fields": [
+            ],
+            "text": file_to_string("проблемы_со_светофором")
         }
     ]
 }
