@@ -108,7 +108,7 @@ templates_map = {
             "text": file_to_string("парковка_на_тротуаре")
         },
         {
-            "id": "disabled parking",
+            "id": "disabled_parking",
             "group": "paprking",
             "name": "Парковка на месте для инвалидов",
             "law_links": [
@@ -131,7 +131,7 @@ templates_map = {
                     "hint": "Напишите, номер автомобиля, марку и цвет"
                 }
             ],
-            "text": file_to_string("парковка_на_тротуаре")
+            "text": file_to_string("парковка_на_месте_для_инвалидов")
         },
         {
             "id": "Illegal_traffic_sign",
