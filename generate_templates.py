@@ -98,11 +98,37 @@ templates_map = {
                 },
                 {
                     "name": "location",
-                    "hint": "Место расположение ямы"
+                    "hint": "Место расположения нарушения"
                 },
                 {
                     "name": "description",
-                    "hint": "Опишите дефект"
+                    "hint": "Напишите, номер автомобиля, марку и цвет"
+                }
+            ],
+            "text": file_to_string("парковка_на_тротуаре")
+        },
+        {
+            "id": "disabled parking",
+            "group": "paprking",
+            "name": "Парковка на месте для инвалидов",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "date_time",
+                    "hint": "Время и дата нарушения"
+                },
+                {
+                    "name": "location",
+                    "hint": "Место расположения нарушения"
+                },
+                {
+                    "name": "description",
+                    "hint": "Напишите, номер автомобиля, марку и цвет"
                 }
             ],
             "text": file_to_string("парковка_на_тротуаре")
