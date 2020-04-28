@@ -134,26 +134,50 @@ templates_map = {
             "text": file_to_string("парковка_на_месте_для_инвалидов")
         },
         {
-            "id": "Illegal_traffic_sign",
-            "group": "signs",
-            "name": "Незаконный дорожный знак(таблички под знаком)",
+            "id": "disabled_parking",
+            "group": "paprking",
+            "name": "Парковка на месте для инвалидов",
             "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
             ],
             "fields": [
                 {
                     "name": "date_time",
-                    "hint": "Время обнаружения"
+                    "hint": "Время и дата нарушения"
                 },
                 {
                     "name": "location",
-                    "hint": "Место расположение дорожного знака"
+                    "hint": "Место расположения нарушения"
                 },
                 {
                     "name": "description",
-                    "hint": "Опишите местонахождение"
+                    "hint": "Напишите, номер автомобиля, марку и цвет"
                 }
             ],
-            "text": file_to_string("незаконный_дорожный_знак")
+            "text": file_to_string("парковка_на_месте_для_инвалидов")
+        },
+        {
+            "id": "lawn_parking",
+            "group": "paprking",
+            "name": "Парковка на газоне",
+            "law_links": [
+            ],
+            "fields": [
+            ],
+            "text": file_to_string("парковка_на_газоне")
+        },
+        {
+            "id": "pedestrian_parking",
+            "group": "paprking",
+            "name": "Парковка на пешеходном переходе",
+            "law_links": [
+            ],
+            "fields": [
+            ],
+            "text": file_to_string("парковка_на_пешеходном_переходе")
         },
         {
             "id": "traffic_light_problems",
@@ -164,6 +188,15 @@ templates_map = {
             "fields": [
             ],
             "text": file_to_string("проблемы_со_светофором")
+        },
+        {
+            "id": "oncoming_traffic_on_oneway_road",
+            "group": "roads",
+            "name": "Движение во встречном направлении по дороге с односторонним движением",
+            "law_links": [],
+            "fields": [
+            ],
+            "text": file_to_string("движение_во_встречном_направлении_по_дороге_с_односторонним_движением")
         }
     ]
 }
