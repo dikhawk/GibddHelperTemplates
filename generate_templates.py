@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 9
+version = 10
 support_app_code_version = 1
 
 
@@ -178,6 +178,16 @@ templates_map = {
             "fields": [
             ],
             "text": file_to_string("парковка_на_пешеходном_переходе")
+        },
+        {
+            "id": "prohibited_stop_parking",
+            "group": "paprking",
+            "name": "Парковка под знаком Остановка запрещена",
+            "law_links": [
+            ],
+            "fields": [
+            ],
+            "text": file_to_string("парковка_под_знаком_остановка_запрещена")
         },
         {
             "id": "traffic_light_problems",
