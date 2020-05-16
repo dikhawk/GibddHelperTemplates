@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 10
+version = 11
 support_app_code_version = 1
 
 
@@ -207,6 +207,15 @@ templates_map = {
             "fields": [
             ],
             "text": file_to_string("движение_во_встречном_направлении_по_дороге_с_односторонним_движением")
+        },
+        {
+            "id": "do_not_provide_an_advantage_at_the_crosswalk",
+            "group": "roads",
+            "name": "Не пропустили на пешеходном переходе",
+            "law_links": [],
+            "fields": [
+            ],
+            "text": file_to_string("не_пропустили_на_пешеходном_переходе")
         }
     ]
 }
