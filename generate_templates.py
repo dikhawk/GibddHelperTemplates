@@ -95,7 +95,7 @@ templates_map = {
         {
             "id": "parking_on_sidewalk",
             "group": "paprking",
-            "description": "",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
             "name": "Парковка на тротуаре",
             "law_links": [
                 {
