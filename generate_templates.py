@@ -37,7 +37,7 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место прооисшествия*"
+                    "hint": "Укажите место происшествия*"
                 },
                 {
                     "name": "appeal_text",
