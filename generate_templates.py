@@ -3,8 +3,8 @@
 import json
 import os
 
-version = 11
-support_app_code_version = 1
+version = 12
+support_app_code_version = 18
 
 
 def file_to_string(file_name):
