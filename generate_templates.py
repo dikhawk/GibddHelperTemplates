@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 13
+version = 14
 support_app_code_version = 20
 
 
@@ -39,11 +39,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место происшествия*"
+                    "hint": "Укажите место происшествия*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Текст обращения*"
+                    "hint": "Текст обращения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_общий")
@@ -63,11 +69,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите расположения ямы*"
+                    "hint": "Укажите расположения ямы*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Опишите дефект*"
+                    "hint": "Опишите дефект*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_яма_на_дороге")
@@ -87,11 +99,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите расположения ямы*"
+                    "hint": "Укажите расположения ямы*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Опишите дефект*"
+                    "hint": "Опишите дефект*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_яма_во_дворе")
@@ -111,11 +129,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_парковка_на_тротуаре")
@@ -135,11 +159,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_парковка_на_месте_для_инвалидов")
@@ -159,11 +189,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_парковка_на_газоне")
@@ -183,11 +219,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_парковка_на_пешеходном_переходе")
@@ -207,11 +249,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_парковка_под_знаком_остановка_запрещена")
@@ -231,11 +279,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место*"
+                    "hint": "Укажите место*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Опишите какой дефект вы обнаружили*"
+                    "hint": "Опишите какой дефект вы обнаружили*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_проблемы_со_светофором")
@@ -255,11 +309,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_движение_во_встречном_направлении_по_дороге_с_односторонним_движением")
@@ -279,11 +339,17 @@ templates_map = {
             "fields": [
                 {
                     "name": "event_location",
-                    "hint": "Укажите место нарушения*"
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет*"
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_не_пропустили_на_пешеходном_переходе")
@@ -300,6 +366,27 @@ templates_map = {
             "law_links": [
             ],
             "fields": [
+                {
+                    "name": "procuracy_level_1",
+                    "hint": "",
+                    "value": "a8f5b01a-0fd8-4989-9249-42851f189878",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "subjects",
+                    "hint": "",
+                    "value": "b060aa2f-64e2-4c9b-b710-97b582726d8b",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "message",
+                    "hint": "Если хотите, можете добавить свои пояснения",
+                    "value": "",
+                    "required_field": False,
+                    "visibility": "visible"
+                }
             ],
             "text": file_to_string("прокуратура_не_получен_ответ_от_гибдд_в_течении_30_дней")
         },
@@ -312,6 +399,27 @@ templates_map = {
             "law_links": [
             ],
             "fields": [
+                {
+                    "name": "procuracy_level_1",
+                    "hint": "",
+                    "value": "a8f5b01a-0fd8-4989-9249-42851f189878",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "subjects",
+                    "hint": "",
+                    "value": "b060aa2f-64e2-4c9b-b710-97b582726d8b",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "message",
+                    "hint": "Укажите перечень допущенных нарушений, которые вашем мнению имеются. См. описание к шаблону.",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
             ],
             "text": file_to_string("прокуратура_немотивированный_ответ")
         },
