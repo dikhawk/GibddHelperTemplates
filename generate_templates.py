@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 14
+version = 15
 support_app_code_version = 20
 
 
@@ -381,7 +381,7 @@ templates_map = {
                     "visibility": "visible"
                 },
                 {
-                    "name": "message",
+                    "name": "appeal_text",
                     "hint": "Если хотите, можете добавить свои пояснения",
                     "value": "",
                     "required_field": False,
@@ -414,7 +414,7 @@ templates_map = {
                     "visibility": "visible"
                 },
                 {
-                    "name": "message",
+                    "name": "appeal_text",
                     "hint": "Укажите перечень допущенных нарушений, которые вашем мнению имеются. См. описание к шаблону.",
                     "value": "",
                     "required_field": True,
