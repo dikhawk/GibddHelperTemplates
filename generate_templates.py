@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 14
+version = 15
 support_app_code_version = 20
 
 
@@ -298,7 +298,7 @@ templates_map = {
             "id": "parking_or_driving_on_bike_path",
             "group": "paprking",
             "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
-            "name": "Парковка вторым рядом",
+            "name": "Парковка или движение по велодорожке",
             "type": "gibdd",
             "law_links": [
                 {
