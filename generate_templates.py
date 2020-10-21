@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 13
+version = 14
 support_app_code_version = 20
 
 
@@ -265,6 +265,66 @@ templates_map = {
             "text": file_to_string("гибдд_парковка_под_знаком_остановка_запрещена")
         },
         {
+            "id": "parking_second_row",
+            "group": "paprking",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
+            "name": "Парковка вторым рядом",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_вторым_рядом")
+        },
+        {
+            "id": "parking_or_driving_on_bike_path",
+            "group": "paprking",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
+            "name": "Парковка вторым рядом",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.15. Нарушение правил расположения транспортного средства на проезжей части дороги, встречного разъезда или обгона",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/3616f9cc443dbe11b6898b6fa10d5b67a307cb59/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет, нарушение (двигался по/припарковался на)",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_или_движение_по_велодорожке")
+        },
+        {
             "id": "traffic_light_problems",
             "group": "road_infrastructure",
             "description": "",
@@ -353,6 +413,36 @@ templates_map = {
                 }
             ],
             "text": file_to_string("гибдд_не_пропустили_на_пешеходном_переходе")
+        },
+        {
+            "id": "blocking_parking",
+            "group": "roads",
+            "description": "",
+            "name": "Блокировка парковочных мест",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.33. Повреждение дорог, железнодорожных переездов или других дорожных сооружений",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/370c94c31af735dc73d224582c9f8a9773c89287/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Опишите предмет, который заблокировал парковку*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_блокировка_парковочных_мест")
         },
 
         ################ Procuracy templates #######################
