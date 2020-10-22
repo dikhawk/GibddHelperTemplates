@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 15
+version = 16
 support_app_code_version = 20
 
 
@@ -418,7 +418,7 @@ templates_map = {
             "id": "blocking_parking",
             "group": "roads",
             "description": "",
-            "name": "Блокировка парковочных мест",
+            "name": "Установка предметов, препятствующих парковке",
             "type": "gibdd",
             "law_links": [
                 {
@@ -442,7 +442,7 @@ templates_map = {
                     "visibility": "visible"
                 }
             ],
-            "text": file_to_string("гибдд_блокировка_парковочных_мест")
+            "text": file_to_string("гибдд_установка_предметов_препятствующих_парковке")
         },
 
         ################ Procuracy templates #######################
