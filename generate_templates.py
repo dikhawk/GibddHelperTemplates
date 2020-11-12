@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 16
+version = 17
 support_app_code_version = 20
 
 
@@ -295,6 +295,36 @@ templates_map = {
             "text": file_to_string("гибдд_парковка_вторым_рядом")
         },
         {
+            "id": "parking_on_bus_stop",
+            "group": "roads",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля. Сфотографируйте или запишите видео, так чтобы было видно водительское место.",
+            "name": "Парковка на остановке общественного транспорта",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_на_остановке_общественного_транспорта")
+        },
+        {
             "id": "parking_or_driving_on_bike_path",
             "group": "paprking",
             "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
@@ -443,6 +473,66 @@ templates_map = {
                 }
             ],
             "text": file_to_string("гибдд_установка_предметов_препятствующих_парковке")
+        },
+        {
+            "id": "roadside_driving",
+            "group": "roads",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля. Для большей эффективности рекомендуется использовать видео.",
+            "name": "Езда по обочине",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.15. Нарушение правил расположения транспортного средства на проезжей части дороги, встречного разъезда или обгона",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/3616f9cc443dbe11b6898b6fa10d5b67a307cb59/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_езда_по_обочине")
+        },
+        {
+            "id": "parking_at_garbage_containers",
+            "group": "roads",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля. Сфотографируйте или запишите видео, так чтобы было видно водительское место.",
+            "name": "Парковка у мусорных контейнеров",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_у_мусорных_контейнеров")
         },
 
         ################ Procuracy templates #######################
