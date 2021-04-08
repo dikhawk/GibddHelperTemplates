@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 25
+version = 26
 support_app_code_version = 20
 
 
@@ -354,7 +354,7 @@ templates_map = {
             ],
             "text": file_to_string("гибдд_парковка_или_движение_по_велодорожке")
         },
-                {
+        {
             "id": "parking_at_garbage_containers",
             "group": "paprking",
             "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля. Сфотографируйте или запишите видео, так чтобы было видно водительское место.",
@@ -563,6 +563,36 @@ templates_map = {
                 }
             ],
             "text": file_to_string("гибдд_брошенный_автомобиль")
+        },
+        {
+            "id": "red_traffic_light",
+            "group": "roads",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля. Для большей эффективности вам стоить отправить видео.",
+            "name": "Проезд на красный сигнал светофора",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.12. Проезд на запрещающий сигнал светофора или на запрещающий жест регулировщика",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/8e1db11085c966408d1ce0191aef369706a76759/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_проезд_на_красный_сигнал_светофора")
         },
 
 
