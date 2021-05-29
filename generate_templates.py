@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 27
+version = 28
 support_app_code_version = 20
 
 
