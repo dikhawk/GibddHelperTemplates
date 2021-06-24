@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 28
+version = 29
 support_app_code_version = 20
 
 
@@ -346,7 +346,7 @@ templates_map = {
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку и цвет, нарушение (двигался по/припарковался на)",
+                    "hint": "Напишите номер транспортного средства, марку, цвет и вид нарушения (двигался по велодорожке/припарковался на велодорожке)",
                     "value": "",
                     "required_field": True,
                     "visibility": "visible"
