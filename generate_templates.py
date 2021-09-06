@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 29
+version = 30
 support_app_code_version = 20
 
 
@@ -328,7 +328,7 @@ templates_map = {
             "id": "parking_or_driving_on_bike_path",
             "group": "paprking",
             "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
-            "name": "Парковка или движение по велодорожке",
+            "name": "Парковка или движение по велодорожке или велополосе",
             "type": "gibdd",
             "law_links": [
                 {
@@ -346,13 +346,73 @@ templates_map = {
                 },
                 {
                     "name": "appeal_text",
-                    "hint": "Напишите номер транспортного средства, марку, цвет и вид нарушения (двигался по велодорожке/припарковался на велодорожке)",
+                    "hint": "Напишите номер транспортного средства, марку, цвет и вид нарушения (двигался по велодорожке, велополосе/припарковался на велодорожке, велополосе)",
                     "value": "",
                     "required_field": True,
                     "visibility": "visible"
                 }
             ],
             "text": file_to_string("гибдд_парковка_или_движение_по_велодорожке")
+        },
+        {
+            "id": "parking_sidewalk_blocking",
+            "group": "paprking",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
+            "name": "Блокировка прохода на тротуар",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.15. Нарушение правил расположения транспортного средства на проезжей части дороги, встречного разъезда или обгона",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/3616f9cc443dbe11b6898b6fa10d5b67a307cb59/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку, цвет",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_блокировка_прохода_на_тротуар")
+        },
+        {
+            "id": "parking_on_bus_lane",
+            "group": "paprking",
+            "description": "Делайте фото, так чтобы было видно водительское место. По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля.",
+            "name": "Парковка на полосе общественного транспорта",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.16. Несоблюдение требований, предписанных дорожными знаками или разметкой проезжей части дороги",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/423d650543917f5abe5c2480d6fb3fca332f9d22/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку, цвет",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_на_полосе_общественного_транспорта")
         },
         {
             "id": "parking_at_garbage_containers",
@@ -478,7 +538,7 @@ templates_map = {
             "id": "blocking_parking",
             "group": "roads",
             "description": "",
-            "name": "Установка предметов, препятствующих парковке",
+            "name": "Установка предметов препятствующих парковке или движению автомобиля",
             "type": "gibdd",
             "law_links": [
                 {
