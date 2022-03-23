@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 32
+version = 33
 support_app_code_version = 20
 
 
@@ -593,6 +593,36 @@ templates_map = {
                 }
             ],
             "text": file_to_string("гибдд_езда_по_обочине")
+        },
+        {
+            "id": "sidewalk_driving",
+            "group": "roads",
+            "description": "По данному обращению вас могу вызвать в ГИБДД в качестве свидетеля. Для большей эффективности рекомендуется использовать видео. Либо сделать несколько фото, на котором видно двежение автомобиля",
+            "name": "Езда по тротуару",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.15. Нарушение правил расположения транспортного средства на проезжей части дороги, встречного разъезда или обгона",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/3616f9cc443dbe11b6898b6fa10d5b67a307cb59/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_езда_по_тротуару")
         },
         {
             "id": "abandoned_car",
