@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 39
+version = 40
 support_app_code_version = 20
 
 
@@ -474,6 +474,38 @@ templates_map = {
             ],
             "text": file_to_string("гибдд_проблемы_со_светофором")
         },
+        {
+            "id": "parking_3metrs_from_lane",
+            "name": "Парковка ближе 3 метров от полосы",
+            "type": "gibdd",
+            "group": "paprking",
+            "description": "По данному обращению вас могут вызвать в ГИБДД в качестве свидетеля.",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_ближе_3_метров_от_полосы")
+        },
+
+
         {
             "id": "oncoming_traffic_on_oneway_road",
             "group": "roads",
