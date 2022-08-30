@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 40
+version = 41
 support_app_code_version = 20
 
 
@@ -233,6 +233,36 @@ templates_map = {
                 }
             ],
             "text": file_to_string("гибдд_парковка_на_пешеходном_переходе")
+        },
+        {
+            "id": "pedestrian_parking_5metr",
+            "group": "paprking",
+            "description": "По данному обращению вас могут вызвать в ГИБДД в качестве свидетеля.",
+            "name": "Парковка ближе 5 метров перед пешеходным переходом",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.19. Нарушение правил остановки или стоянки транспортных средств",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/b9c0a2b651b7f06f5693cd2e77f04ff473f50f29/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_парковка_ближе_5_метров_перед_пешеходным_переходом")
         },
         {
             "id": "prohibited_stop_parking",
