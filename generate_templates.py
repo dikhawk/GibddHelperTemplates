@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 41
+version = 42
 support_app_code_version = 20
 
 
@@ -534,8 +534,6 @@ templates_map = {
             ],
             "text": file_to_string("гибдд_парковка_ближе_3_метров_от_полосы")
         },
-
-
         {
             "id": "oncoming_traffic_on_oneway_road",
             "group": "roads",
@@ -565,6 +563,36 @@ templates_map = {
                 }
             ],
             "text": file_to_string("гибдд_движение_во_встречном_направлении_по_дороге_с_односторонним_движением")
+        },
+        {
+            "id": "oncoming_traffic_on_road",
+            "group": "roads",
+            "description": "По данному обращению вас могут вызвать в ГИБДД в качестве свидетеля.",
+            "name": "Движение по встречке",
+            "type": "gibdd",
+            "law_links": [
+                {
+                    "title": "КоАП РФ Статья 12.16. Несоблюдение требований, предписанных дорожными знаками или разметкой проезжей части дороги",
+                    "link": "http://www.consultant.ru/document/cons_doc_LAW_34661/423d650543917f5abe5c2480d6fb3fca332f9d22/"
+                }
+            ],
+            "fields": [
+                {
+                    "name": "event_location",
+                    "hint": "Укажите место нарушения*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                },
+                {
+                    "name": "appeal_text",
+                    "hint": "Напишите номер транспортного средства, марку и цвет*",
+                    "value": "",
+                    "required_field": True,
+                    "visibility": "visible"
+                }
+            ],
+            "text": file_to_string("гибдд_движение_по_встречке")
         },
         {
             "id": "do_not_provide_an_advantage_at_the_crosswalk",
