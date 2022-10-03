@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 43
+version = 44
 support_app_code_version = 20
 
 
@@ -506,7 +506,7 @@ templates_map = {
         },
         {
             "id": "parking_3metrs_from_lane",
-            "name": "Парковка ближе 3 метров от полосы",
+            "name": "Парковка ближе 3 метров от сплошной полосы",
             "type": "gibdd",
             "group": "paprking",
             "description": "По данному обращению вас могут вызвать в ГИБДД в качестве свидетеля.",
@@ -532,7 +532,7 @@ templates_map = {
                     "visibility": "visible"
                 }
             ],
-            "text": file_to_string("гибдд_парковка_ближе_3_метров_от_полосы")
+            "text": file_to_string("гибдд_парковка_ближе_3_метров_от_сплошной_полосы")
         },
         {
             "id": "oncoming_traffic_on_oneway_road",
