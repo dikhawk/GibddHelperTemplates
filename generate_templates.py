@@ -3,7 +3,7 @@
 import json
 import os
 
-version = 45
+version = 46
 support_app_code_version = 20
 
 
@@ -779,7 +779,7 @@ templates_map = {
             "text": file_to_string("гибдд_проезд_на_красный_сигнал_светофора"),
         },
         {
-            "id": "red_traffic_light",
+            "id": "parking_near_intersection",
             "group": "roads",
             "description": "Парковка ближе 5 метров перед пересечением проезжих частей",
             "name": "Парковка ближе 5 метров перед пересечением проезжих частей",
