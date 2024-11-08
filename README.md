@@ -41,4 +41,6 @@
             <visibility></visibility>
         </field>
     </fields>
+    <text>
+    </text>
 </template>

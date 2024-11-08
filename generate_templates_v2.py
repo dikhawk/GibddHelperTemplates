@@ -95,8 +95,8 @@ def get_template(type: str, group: str, fileName: str) -> Template:
         f"{TEMPLATES_DIRECTORY}{os.sep}{type}{os.sep}{group}{os.sep}{fileName}"
     )
 
-    if "гибдд_" in fileName or "прокуратура_" in fileName:
-        print(f"Old file template format: {path_to_template}")
+    if "*" in fileName:
+        print(f"Template is ignored: {path_to_template}")
         return None
 
     if os.path.isdir(path_to_template):
@@ -250,10 +250,19 @@ def get_current_version() -> CurrentVersion:
         support_app_code_version=current_version_json["support_app_code_version"],
     )
 
+def check_repeated_template_id(templates: list[Template]):
+    ids: set[str] = set()
+    
+    for template in templates:
+        if template.id in ids:
+            raise IndexError(f"Repeated id: {template.id}")
+        
+        ids.add(template.id)
+    return
 
 def main():
     templates: list[Template] = generate_templates()
-    # response_json_for_compare = generate_json_response(templates)
+    check_repeated_template_id(templates)
     update_current_version_if_have_changes()
 
     response_json = generate_json_response(templates)
