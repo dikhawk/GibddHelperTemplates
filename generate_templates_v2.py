@@ -10,6 +10,7 @@ import json
 TEMPLATES_DIRECTORY = "templates"
 PATH_TO_TEMPLATES_JSON = "templates.json"
 PATH_TO_CURRENT_VERSION_JSON = "current_version"
+GENERAL_GROUP = "general"
 VERSION = 47
 SUPPORT_APP_CODE_VERSION = 20
 
@@ -84,10 +85,15 @@ def generate_templates() -> list[Template]:
             for templateFile in templatesFiles:
                 template = get_template(type=type, group=group, fileName=templateFile)
 
-                if template is not None:
+                if template is None:
+                    continue
+
+                if group == GENERAL_GROUP:
+                    templates.insert(0, template)
+                else:
                     templates.append(template)
 
-    return templates
+    return sortTemplates(templates)
 
 
 def get_template(type: str, group: str, fileName: str) -> Template:
@@ -250,15 +256,29 @@ def get_current_version() -> CurrentVersion:
         support_app_code_version=current_version_json["support_app_code_version"],
     )
 
+
 def check_repeated_template_id(templates: list[Template]):
     ids: set[str] = set()
-    
+
     for template in templates:
         if template.id in ids:
             raise IndexError(f"Repeated id: {template.id}")
-        
+
         ids.add(template.id)
     return
+
+
+def sortTemplates(templates: list[Template]) -> list[Template]:
+    sorted_templates = sorted(templates, key=lambda template: template.name)
+    general_group = [
+        template for template in sorted_templates if template.group == GENERAL_GROUP
+    ]
+    other_groups = [
+        template for template in sorted_templates if template.group != GENERAL_GROUP
+    ]
+
+    return general_group + other_groups
+
 
 def main():
     templates: list[Template] = generate_templates()
