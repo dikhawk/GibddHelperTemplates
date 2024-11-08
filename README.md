@@ -11,7 +11,7 @@
 
 Формат шаблонов
 
-<template>
+```<template>
     <id></id>
     <name></name>
     <description></description>
@@ -43,4 +43,4 @@
     </fields>
     <text>
     </text>
-</template>
+</template>```
