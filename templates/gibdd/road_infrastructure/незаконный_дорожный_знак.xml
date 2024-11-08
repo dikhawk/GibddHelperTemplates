@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <template>
-    <id>Illegal_road_sign</id>
+    <id>illegal_road_sign</id>
     <name>Незаконный дорожный знак</name>
     <description></description>
     <law_links>
